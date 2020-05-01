@@ -1,0 +1,13 @@
+#install Django
+conda install django
+
+#start a new project
+django-admin startproject <project name>
+
+#Start the
+python manage.py runserver
+
+
+python -m django --version
+
+python manage.py startapp <app name>
