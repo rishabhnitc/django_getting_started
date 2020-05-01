@@ -16,11 +16,15 @@ python manage.py runserver
 #Migrations
 pyhtom manage.py showmigrations
 python manage.py migrate
+python manage.py migrate meetings 0001 #run a specific migration
 
 #DB
 #connect to db shell
 python manage.py dbshell
 python manage.py sqlmigrate meetings 0001 # see the migration result
+https://pypi.org/project/django-mssql-backend/
+https://medium.com/@royce236/django-and-ms-sql-server-2012-connection-2018-120c54dfc037
+
 
 
 SQLLite
@@ -30,6 +34,7 @@ select * from django_migrations;
 
 admin
 python manage.py createsuperuser
+
 
 
 

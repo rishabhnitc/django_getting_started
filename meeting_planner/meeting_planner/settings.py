@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import sys
+
+print(sys.argv)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -76,10 +79,32 @@ WSGI_APPLICATION = 'meeting_planner.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'sql_server.pyodbc',
+        #'HOST':'DESKTOP-04UD1B6',
+        'HOST':'localhost',
+        'NAME':'meet_db',
+        'TRUSTED_CONNECTION':'True',
+        'OPTIONS': {
+            'driver' : 'ODBC Driver 17 for SQL Server',
+        }
     }
+    # 'default': {
+    #     'ENGINE': 'sql_server.pyodbc',
+    #     'HOST':'DESKTOP-04UD1B6',
+    #     #'HOST':'localhost',
+    #     'NAME':'meet_db',
+    #     'USER':'sa',
+    #     'PASSWORD': '123!@#',
+    #     'OPTIONS': {
+    #         'driver' : 'ODBC Driver 17 for SQL Server',
+    #     }
+    # }
+
 }
 
 

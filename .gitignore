@@ -4,3 +4,4 @@ meeting_planner/website/migrations/__pycache__/
 meeting_planner/meeting_planner/__pycache__/
 meeting_planner/meetings/__pycache__/
 meeting_planner/meetings/migrations/__pycache__/
+meeting_planner/meetings/tests/__pycache__/
