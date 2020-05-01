@@ -26,8 +26,6 @@ https://pypi.org/project/django-mssql-backend/
 https://medium.com/@royce236/django-and-ms-sql-server-2012-connection-2018-120c54dfc037
 https://stackoverflow.com/questions/37692780/error-28000-login-failed-for-user-domain-user-with-pyodbc
 
-
-
 SQLLite
 .tables # show tables
 .exit
