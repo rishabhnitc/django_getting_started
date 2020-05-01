@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welcome</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Welcome{% endblock %}
+
+{% block content %}
     <h1>Welcome to the meeting planner</h1>
 <p> This is a demo application for the course
 <em>Django:getting started</em>
@@ -13,6 +12,7 @@
 <p>
     {{message}}
 </p>
+<img src="{% static 'website/m.png'%}" width="200px" />
     <h2>Meetings</h2>
     <ul>
         {% for meeting in meetings %}
@@ -23,14 +23,5 @@
         </li>
         {% endfor %}
     </ul>
-    <!--
-<p>
-    There are currently {{num_meetings}} meetings
-    {{meetings}}
-
-    in the database
-</p>
--->
-
-</body>
-</html>
+<a href={% url 'rooms' %}>Room List</a>
+{% endblock%}

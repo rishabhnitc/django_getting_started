@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Meeting: {{room.name}}</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Meeting: {{room.name}} {% endblock %}
+
+{% block content %}
+
+
+
+
 <h1>{{room.name}}</h1>
 <p>
     The room {{room.name}} is situated
@@ -13,5 +16,7 @@
 
 Please add a "Home" link to the welcome view here
 Using the <a href="{% url 'welcome' %}">Home</a> template tag
-</body>
-</html>
+</p>
+
+<a href={% url 'rooms' %}>Room List</a>
+{% endblock%}

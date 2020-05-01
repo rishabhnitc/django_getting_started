@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Rooms</title>
-</head>
-<body>
-<h1>{{room.name}}</h1>
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
 <p>
      <h2>Rooms</h2>
     <ul>
@@ -18,9 +15,11 @@
         {% endfor %}
     </ul>
 
-
+<p>
 Please add a "Home" link to the welcome view here
 Using the <a href="{% url 'welcome' %}">Home</a> template tag
-</body>
-</html>
+</p>
+
+<a href={% url 'rooms' %}>Room List</a>
+{% endblock%}
 
