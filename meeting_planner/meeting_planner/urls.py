@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from website.views import welcome, date, about
+from meetings.views import detail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', welcome),  # function based views, this is default page
     path('date.html', date),  # function based views
-    path('about.html', about)  # function based views
+    path('about.html', about),  # function based views
+    path('meetings/<int:id>', detail)
 ]

@@ -2,10 +2,16 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from datetime import datetime
 
+from meetings.models import Meeting
 
-# Create your views here.
+
 def welcome(request):
-    return HttpResponse('Welcome to the meeting Place')
+    return render(request, "website/welcome.html",
+                  {'message': ' This data was sent from the view to the template.',
+                  # "num_meetings": Meeting.objects.count()}
+
+                   "meetings": Meeting.objects.all()}
+                  )
 
 
 # Create your views here.

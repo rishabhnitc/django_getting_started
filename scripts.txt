@@ -24,6 +24,7 @@ python manage.py dbshell
 python manage.py sqlmigrate meetings 0001 # see the migration result
 https://pypi.org/project/django-mssql-backend/
 https://medium.com/@royce236/django-and-ms-sql-server-2012-connection-2018-120c54dfc037
+https://stackoverflow.com/questions/37692780/error-28000-login-failed-for-user-domain-user-with-pyodbc
 
 
 
