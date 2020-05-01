@@ -31,7 +31,6 @@ SQLLite
 .exit
 select * from django_migrations;
 
-
 admin
 python manage.py createsuperuser
 
