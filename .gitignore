@@ -2,3 +2,5 @@
 meeting_planner/website/__pycache__/
 meeting_planner/website/migrations/__pycache__/
 meeting_planner/meeting_planner/__pycache__/
+meeting_planner/meetings/__pycache__/
+meeting_planner/meetings/migrations/__pycache__/

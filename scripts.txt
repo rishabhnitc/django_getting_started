@@ -1,13 +1,35 @@
 #install Django
 conda install django
 
+#Check Version
+python -m django --version
+
 #start a new project
 django-admin startproject <project name>
+
+#Start App
+python manage.py startapp <app name>
 
 #Start the
 python manage.py runserver
 
+#Migrations
+pyhtom manage.py showmigrations
+python manage.py migrate
 
-python -m django --version
+#DB
+#connect to db shell
+python manage.py dbshell
+python manage.py sqlmigrate meetings 0001 # see the migration result
 
-python manage.py startapp <app name>
+
+SQLLite
+.tables # show tables
+.exit
+select * from django_migrations;
+
+admin
+python manage.py createsuperuser
+
+
+
