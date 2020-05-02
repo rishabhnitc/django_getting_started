@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Meeting: {{meeting.title}}</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Meeting: {{meeting.title}} {% endblock %}
+
+{% block content %}
+
+
 <h1>{{meeting.title}}</h1>
 <p>
     This meeting has been scheduled on {{meeting.date}}, at
@@ -13,5 +14,5 @@
 
 Please add a "Home" link to the welcome view here
 Using the <a href="{% url 'welcome' %}">Home</a> template tag
-</body>
-</html>
+
+{% endblock%}
